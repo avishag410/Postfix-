@@ -1,6 +1,6 @@
 import java.util.Enumeration;
 /*
- * if direction is true, we will tokenize from left tu right,
+ * if direction is true, we will tokenize from left to right,
  * if direction is false, then we will tokenize from right to left.
  */
 public class ExpTokenizer extends Object implements Enumeration<Object>  {
