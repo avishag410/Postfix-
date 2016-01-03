@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-avishag's change
-=======
-my change
->>>>>>> 362184fc608a4ab39651c06efc503eec73d05107
