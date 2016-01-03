@@ -1,10 +1,14 @@
-
+/**
+ * Class which represents a closed bracket
+ */
 public class CloseBracket extends CalcToken {
 
-	@Override
+	/**
+	 * Return the representation of a closed bracket as string
+	 * @return ")" as string
+	 */
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return ")";
 	}
 
 }
