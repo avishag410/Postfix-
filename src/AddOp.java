@@ -12,7 +12,6 @@ public class AddOp extends BinaryOp {
 	 * @param right the right operand
 	 * @return result of : left + right
 	 */
-	@Override
 	public double operate(double left,double right){
 		return left+right;
 	}
@@ -22,7 +21,6 @@ public class AddOp extends BinaryOp {
 	 * Return string represents the operation "addition"
 	 * @return "+" as a string
 	 */
-	@Override
 	public String toString() {
 		return "+";
 		

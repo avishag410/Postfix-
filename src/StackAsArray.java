@@ -2,7 +2,7 @@ import java.util.EmptyStackException;
 
 /**
  * This class implements the Stack interface by using an
- * extendable array.
+ * extendible array.
  */
 public class StackAsArray implements Stack {
 

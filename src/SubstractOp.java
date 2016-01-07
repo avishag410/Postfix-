@@ -7,7 +7,6 @@ public class SubstractOp extends BinaryOp {
 	 *@param right the right operand 
 	 *@return the result of left-right
 	 */
-	@Override
 	public double operate(double left, double right) {
 		return left-right;
 	}
@@ -17,7 +16,6 @@ public class SubstractOp extends BinaryOp {
 	 * Return string represents the operation "subtraction"
 	 * @return "-" as a string 
 	 */
-	@Override
 	public String toString() {
 		return "-";
 	}

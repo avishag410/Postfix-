@@ -57,7 +57,30 @@ public class Tester {
 	 * Checks the PostfixCalculator class.
 	 */
 	private static void testPostfixCalculator() {
-		
-		/* TODO Go for it! write your tests here for the PostfixCalculator class! */
+		PostfixCalculator c1 = new PostfixCalculator();
+		c1.evaluate("2 3 +");
+		test(c1.getCurrentResult()==5.0,""); //returns 5.0
+		c1.evaluate("3 5 -");
+		test(c1.getCurrentResult()==-2.0,""); // returns -2.0
+		c1.evaluate("6 2 *");
+		test(c1.getCurrentResult()==12.0,""); // returns 12.0
+		c1.evaluate("10 4 /");
+		test(c1.getCurrentResult()==2.5,""); // returns 2.5
+		c1.evaluate("2 4 ^");
+		test(c1.getCurrentResult()==16.0,""); // returns 16.0
+		c1.evaluate("2 3 + 4 2 - *");
+		test(c1.getCurrentResult()==10.0,""); // returns 10.0
+		c1.evaluate("2 3 ^ 4 2 * / 7 -");
+		test(c1.getCurrentResult()==-6.0,""); // returns -6.0
+		c1.evaluate("2 3 ^ 4 2 * / -7 -");
+		test(c1.getCurrentResult()==8.0,""); // returns 8.0
+		//c1.evaluate("4 5 $"); // SYNTAX ERROR: invalid token $
+		//c1.evaluate("7.0.1"); // SYNTAX ERROR: invalid number 7.0.1
+		//c1.evaluate("5 6 7 4"); // SYNTAX ERROR: write here whatever
+		//description you want
+		//c1.evaluate("*"); // SYNTAX ERROR: cannot perform operation * (or
+		//whatever description you choose to give here)
+		//c1.evaluate("5 6 * 4 2 * 1 2 *"); // SYNTAX ERROR: invalid
+		//expression
 	}
 }

@@ -11,7 +11,6 @@ public class DivideOp extends BinaryOp {
 	 *@param right the right operand
 	 *@return result of left/right 
 	 */
-	@Override
 	public double operate(double left, double right) {
 		if(right==0)
 			//throw exception
@@ -26,7 +25,6 @@ public class DivideOp extends BinaryOp {
 	 *Return string represents the operation "division"
 	 * @return "/" as a string
 	 */
-	@Override
 	public String toString() {
 		return "/";
 		

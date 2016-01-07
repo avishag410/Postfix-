@@ -13,7 +13,6 @@ public class ValueToken extends CalcToken {
 	 * Return the representation of a value token as string
 	 * @return a number value as string
 	 */
-	@Override
 	public String toString() {
 		String ans = ""+value;
 		return ans;

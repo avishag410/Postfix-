@@ -10,7 +10,6 @@ public class PowOp extends BinaryOp {
 	 *@param right the right operand
 	 *@return result of left^right 
 	 */
-	@Override
 	public double operate(double left, double right) {
 		return Math.pow(left, right);
 	}
@@ -19,7 +18,6 @@ public class PowOp extends BinaryOp {
 	 *Return string represents the operation "power"  
 	 *@return  "^" as a string 
 	 */
-	@Override
 	public String toString() {
 		return "^";
 	}

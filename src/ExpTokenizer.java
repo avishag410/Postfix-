@@ -33,11 +33,27 @@ public class ExpTokenizer extends Object implements Enumeration<Object>  {
 			resultToken =  new AddOp();
 		else if (token.equals("*"))
 			resultToken =  new MultiplyOp();
-
-		// Fill the rest of the token cases by yourself	
-
-		else 
-			resultToken = new ValueToken(Double.parseDouble(token));			
+		else if (token.equals("/"))
+			resultToken =  new DivideOp();
+		else if (token.equals("-"))
+			resultToken =  new SubstractOp();
+		else if (token.equals("^"))
+			resultToken =  new PowOp();
+		else if (token.equals("("))
+			resultToken =  new OpenBracket();
+		else if (token.equals(")"))
+			resultToken =  new CloseBracket();
+		// Check if the token contains a number
+		else if (token.matches(".*\\d+.*"))
+			try{
+				resultToken = new ValueToken(Double.parseDouble(token));
+			}
+			catch(Exception ex){
+				throw new ParseException("SYNTAX ERROR: invalid number " + token);
+			}
+		else{
+			throw new ParseException("SYNTAX ERROR: invalid token " + token);
+		}
 		
 		return resultToken;	
 	}
