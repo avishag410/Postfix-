@@ -1,5 +1,14 @@
+/**
+ * 
+ * Class represents postfix calculator
+ *
+ */
 public class PostfixCalculator extends Calculator {
 
+	/**
+	 * @param expr expression to calculate
+	 * @throws ParseException if contains invalid expression
+	 */
 	public void evaluate(String expr) {
 		ExpTokenizer expTokenizer = new ExpTokenizer(expr,true);
 		stack = new StackAsArray();
@@ -14,7 +23,7 @@ public class PostfixCalculator extends Calculator {
 					madeOperation = true;
 				}
 				catch (NullPointerException ex){
-					throw new ParseException("SYNTAX ERROR:  cannot perform operation " + ((BinaryOp)token).toString());
+					throw new ParseException("SYNTAX ERROR: cannot perform operation " + ((BinaryOp)token).toString());
 				}
 			}
 			else{
@@ -24,13 +33,11 @@ public class PostfixCalculator extends Calculator {
 			}
 		}
 		
-		if(stack.size != 1){
-			if(!madeOperation){
-				throw new ParseException("SYNTAX ERROR: expression must contains an operation token");
-			}
-			else{
-				throw new ParseException("SYNTAX ERROR: invalid expression");
-			}
+		if(!madeOperation && stack.size > 1){
+			throw new ParseException("SYNTAX ERROR: expression must contains an operation token");
+		}
+		else if(stack.size != 1){
+			throw new ParseException("SYNTAX ERROR: invalid expression");
 		}
 	}
 

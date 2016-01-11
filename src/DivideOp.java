@@ -13,9 +13,7 @@ public class DivideOp extends BinaryOp {
 	 */
 	public double operate(double left, double right) {
 		if(right==0)
-			//throw exception
-			//meanwhile return pi (3.14)
-			return 3.14;
+			throw new IllegalArgumentException("Can not divide by zero.");
 		else
 			return left/right;
 		

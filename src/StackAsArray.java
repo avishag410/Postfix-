@@ -21,7 +21,9 @@ public class StackAsArray implements Stack {
 		elements = new Object[INITIAL_CAPACITY];
 		size = 0;
 	}
-
+	/**
+	 * @param o an object to insert into the the stack
+	 */
 	public void push(Object o) {
 		// Make sure there is enough room in the array
 		if (size >= elements.length) {
@@ -31,7 +33,9 @@ public class StackAsArray implements Stack {
 		elements[size] = o;
 		size++;
 	}
-	 
+	 /**
+	  * @return last inserted object  
+	  */
 	public Object pop() {
 		// If there are no elements, an exception is thrown
 		if (size == 0)
